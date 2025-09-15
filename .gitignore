@@ -1,0 +1,15 @@
+# Instructor-only materials
+instructor-materials/
+demo-project/
+
+# Keep these files local for teaching
+*.local.*
+.vscode/settings.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

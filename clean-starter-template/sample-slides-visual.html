@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Slide Image</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .slide {
+            background: white;
+            width: 800px;
+            height: 600px;
+            margin: 20px auto;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        
+        .slide h1 {
+            color: #2c3e50;
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+        
+        .slide .subtitle {
+            color: #7f8c8d;
+            font-size: 18px;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .slide .meta {
+            color: #34495e;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 50px;
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .slide h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 30px 0 20px 0;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        
+        .slide ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .slide li {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-left: 4px solid #e74c3c;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        
+        .slide li strong {
+            color: #2c3e50;
+        }
+
+        /* Compact styling for recommendations slide */
+        .slide.recommendations h2 {
+            margin: 20px 0 15px 0;
+        }
+
+        .slide.recommendations li {
+            padding: 12px 18px;
+            margin: 8px 0;
+            font-size: 15px;
+            line-height: 1.3;
+        }
+        
+        .instruction {
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            margin: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instruction">
+        📸 Take a screenshot of the slide below to use in your session demo
+    </div>
+
+    <!-- Slide 1: Title Slide -->
+    <div class="slide">
+        <h1>Mobile Checkout Experience Research</h1>
+        <div class="subtitle">Usability Study Findings & Insights</div>
+        <div class="meta">📱 Mobile App Study | 👥 12 Participants | 📅 August 2024</div>
+    </div>
+
+    <!-- Slide 3: Key Findings -->
+    <div class="slide">
+        <h1>Key Findings Summary</h1>
+        <h2>Critical Issues Identified:</h2>
+        <ul>
+            <li><strong>Payment Method Selection Confusion</strong> - 8 out of 12 users struggled with payment selection</li>
+            <li><strong>Order Review Lacks Visual Context</strong> - 10 out of 12 users wanted visual confirmation in order review</li>
+            <li><strong>Hidden Shipping Address Edit</strong> - 5 out of 12 users couldn't locate address modification options</li>
+            <li><strong>Unclear Order Confirmation</strong> - 7 out of 12 users were uncertain if orders were submitted successfully</li>
+        </ul>
+    </div>
+
+    <!-- Slide 4: User Quotes - Payment Issues -->
+    <div class="slide">
+        <h1>User Quotes - Payment Issues</h1>
+        <div style="background: #f1c40f; padding: 20px; border-radius: 8px; margin: 20px 0; font-style: italic; font-size: 18px; line-height: 1.6;">
+            "I couldn't figure out if my card was already saved or if I needed to enter it again. The buttons looked the same."
+            <div style="text-align: right; margin-top: 10px; font-weight: bold;">- P01, New User</div>
+        </div>
+        <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; margin: 20px 0; font-style: italic; font-size: 18px; line-height: 1.6;">
+            "There were like 4 different payment buttons and I wasn't sure which one to use. Very confusing."
+            <div style="text-align: right; margin-top: 10px; font-weight: bold;">- P05, New User</div>
+        </div>
+    </div>
+
+    <!-- Slide 5: User Quotes - Order Review & Address Issues -->
+    <div class="slide">
+        <h1>User Quotes - Order Review & Address Issues</h1>
+        <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; margin: 20px 0; font-style: italic; font-size: 18px; line-height: 1.6;">
+            "Wait, what am I actually buying? I can see the price but where are the product images?"
+            <div style="text-align: right; margin-top: 10px; font-weight: bold;">- P03, New User</div>
+        </div>
+        <div style="background: #fdf2e9; padding: 20px; border-radius: 8px; margin: 20px 0; font-style: italic; font-size: 18px; line-height: 1.6;">
+            "I moved last month but couldn't find where to change my address. I almost gave up and didn't buy anything."
+            <div style="text-align: right; margin-top: 10px; font-weight: bold;">- P02, Returning User</div>
+        </div>
+    </div>
+
+    <!-- Slide 6: User Quotes - Confirmation Issues -->
+    <div class="slide">
+        <h1>User Quotes - Confirmation Issues</h1>
+        <div style="background: #fce4ec; padding: 20px; border-radius: 8px; margin: 20px 0; font-style: italic; font-size: 18px; line-height: 1.6;">
+            "I pressed 'Complete Order' but nothing happened for like 10 seconds. Did it work? Should I press it again?"
+            <div style="text-align: right; margin-top: 10px; font-weight: bold;">- P04, Power User</div>
+        </div>
+        <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 20px 0; font-style: italic; font-size: 18px; line-height: 1.6;">
+            "I wanted to double-check what I was ordering but the summary was just text. Show me pictures!"
+            <div style="text-align: right; margin-top: 10px; font-weight: bold;">- P06, Returning User</div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Recommendations -->
+    <div class="slide recommendations">
+        <h1>Recommendations</h1>
+        <h2>Priority Actions:</h2>
+        <ul>
+            <li><strong>1. Redesign Payment Method Selection (P0)</strong><br>
+                Create clear visual distinction between payment options</li>
+            <li><strong>2. Add Visual Order Review (P0)</strong><br>
+                Include product thumbnails and descriptions in final summary</li>
+            <li><strong>3. Implement Loading States (P1)</strong><br>
+                Show clear progress indicators during order processing</li>
+            <li><strong>4. Improve Address Management (P2)</strong><br>
+                Make shipping address editing more discoverable</li>
+        </ul>
+    </div>
+
+</body>
+</html>
