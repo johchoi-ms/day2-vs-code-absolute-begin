@@ -1,4 +1,4 @@
-# VS Code + AI for UX Professionals
+# VS Code for Poets! (or Designers and Researchers)
 
 Learn how VS Code with AI agent mode can transform the way UX designers and researchers create interactive presentations and prototypes. This repository provides hands-on materials to get you started building engaging, data-driven research presentations.
 
@@ -24,8 +24,8 @@ Learn how VS Code with AI agent mode can transform the way UX designers and rese
 
 ### By the end of this tutorial, you'll
 
-1. Understand how VS Code's AI agent mode can enhance your UX workflow
-2. Know how to set up a workspace for presentation projects  
+1. Understand how VS Code's AI agent mode can enhance a UX workflow
+2. Know how to set up a workspace for projects  
 3. Experience building interactively with AI assistance
 4. Have created a working research presentation dashboard
 5. Feel confident to explore VS Code further on your own
