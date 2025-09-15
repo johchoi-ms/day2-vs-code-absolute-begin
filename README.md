@@ -1,67 +1,59 @@
-# VS Code Agent Mode Training for UX Professionals
+# VS Code + AI for UX Professionals
 
-This repository contains training materials for a 60-minute "Getting Started" session focused on helping UX designers and researchers understand the benefits of using VS Code with AI agent mode.
+Learn how VS Code with AI agent mode can transform the way UX designers and researchers create interactive presentations and prototypes. This repository provides hands-on materials to get you started building engaging, data-driven research presentations.
 
-## Repository Structure
+## What You'll Find Here
 
 ```
-├── instructor-materials/          # Materials for session facilitator  
-│   └── MASTER-INSTRUCTOR-GUIDE.md # Complete session reference - everything you need
-├── clean-starter-template/       # 🎯 PARTICIPANT WORKSPACE - everything in one place
-│   ├── SESSION-GUIDE.md          # Complete participant guide with session walkthrough
-│   ├── index.html               # Basic HTML structure (gets transformed)
-│   ├── styles.css               # Minimal starter styles (AI enhances this)
-│   ├── research-data.js         # Research data to work with
-│   ├── traditional-slides-content.md # Text version of slide content for reference
-│   ├── sample-slides-visual.html # Visual slide presentation for demo
-│   └── README.md                # Simple pointer to SESSION-GUIDE.md
-├── demo-project/                # Complete working example
-│   ├── index.html               # Full interactive dashboard
-│   ├── styles.css               # Professional styling
-│   ├── research-data.js         # Research data
-│   └── README.md                # Project documentation
+├── clean-starter-template/       # 🎯 START HERE - Your workspace
+│   ├── SESSION-GUIDE.md          # Complete step-by-step guide
+│   ├── index.html               # Basic HTML structure to build upon
+│   ├── styles.css               # Minimal starter styles
+│   ├── research-data.js         # Sample research data to work with
+│   ├── traditional-slides-content.md # Reference content
+│   ├── sample-slides-visual.html # Visual examples
+│   └── README.md                # Getting started pointer
 └── README.md                    # This file
 ```
 
-## Session Overview
+## What You'll Learn
 
-**Target Audience**: UX designers and researchers who are new to VS Code  
-**Duration**: 60 minutes  
-**Focus**: Practical introduction to workspace setup and AI-assisted development  
+**Perfect for**: UX designers and researchers new to VS Code  
+**Time needed**: About 60 minutes  
+**Approach**: Hands-on building with AI assistance  
 
-## Learning Objectives
+### By the end of this tutorial, you'll
 
-By the end of this session, participants will:
-1. Understand the unique benefits VS Code's agent mode offers to UX professionals
-2. Know how to set up a workspace for presentation/prototype projects
-3. Experience the iterative building process with AI assistance
-4. Have a working example of an interactive research presentation
-5. Feel confident to continue exploring on their own
+1. Understand how VS Code's AI agent mode can enhance your UX workflow
+2. Know how to set up a workspace for presentation projects  
+3. Experience building interactively with AI assistance
+4. Have created a working research presentation dashboard
+5. Feel confident to explore VS Code further on your own
 
-## The Demo Project
+## What You'll Build
 
-Participants will build an interactive research presentation dashboard featuring:
+An interactive research presentation dashboard featuring:
+
 - Navigation between different insight categories
-- Filtering capabilities for research findings
+- Filtering capabilities for research findings  
 - Interactive journey mapping
 - Professional styling and layouts
 - Real research data integration
 
-This example demonstrates how VS Code + AI can help UX professionals create more engaging presentations than traditional static reports.
+This demonstrates how VS Code + AI can help you create more engaging presentations than traditional static reports.
 
-## Quick Start for Instructors
+## Getting Started
 
-1. **Prepare**: Review `instructor-materials/MASTER-INSTRUCTOR-GUIDE.md` for complete session reference
-2. **Setup**: Familiarize yourself with the `demo-project` structure  
-3. **Test**: Ensure Live Server extension works with both starter and demo
-4. **Share**: Provide participants access to `clean-starter-template/` folder
+1. **Open the workspace**: Open the `clean-starter-template/` folder in VS Code
+2. **Follow the guide**: Open `SESSION-GUIDE.md` for complete step-by-step instructions  
+3. **Start building**: Use the embedded AI prompts to create your interactive dashboard
 
-## Quick Start for Participants
+## Prerequisites
 
-1. **Setup**: Open `clean-starter-template/` folder in VS Code
-2. **Start Here**: Open `SESSION-GUIDE.md` - everything you need is consolidated in this guide
-3. **Build**: Follow the step-by-step session walkthrough with embedded AI prompts
+- VS Code installed with GitHub Copilot or similar AI assistant
+- Basic familiarity with opening files and folders in VS Code
+- No coding experience required - the AI will help you learn as you go!
 
 ---
 
-*This training is part of a 3-day learning arc where participants get VS Code prerequisites (day 1), hands-on getting started experience (day 2 - this session), and value creation opportunities (day 3).*
+*Ready to transform your research presentations? Open `clean-starter-template/SESSION-GUIDE.md` to begin!*

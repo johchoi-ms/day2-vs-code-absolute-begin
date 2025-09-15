@@ -35,7 +35,7 @@ Compare before/after and plan how to use this in your work.
 
 ## 🚀 **Phase 1: The Destination Preview**
 
-*During this phase, your instructor will show you the completed interactive presentation. Don't worry about understanding how it works - just focus on what it does and how it could change your research presentations.*
+*First, let's look at what you'll be building. Open the `sample-slides-visual.html` file in VS Code and preview it (right-click → "Open with Live Server" or similar). This shows you the kind of interactive presentation you can create. Don't worry about understanding how it works - just focus on what it does and how it could change your research presentations.*
 
 **Key Things to Notice:**
 - **Navigation Tabs**: Switch between different views of the same research
