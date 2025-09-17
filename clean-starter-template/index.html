@@ -3,50 +3,535 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Presentation Starter</title>
+    <title>Mobile Checkout Research Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Mobile Checkout Research</h1>
+        <h1>Mobile Checkout Research Dashboard</h1>
         <p>📱 12 Participants | 📅 August 2024</p>
     </header>
 
+    <nav class="tab-navigation">
+        <button class="tab-btn active" onclick="showTab('overview')">Overview</button>
+        <button class="tab-btn" onclick="showTab('journey')">User Journey</button>
+        <button class="tab-btn" onclick="showTab('findings')">Key Findings</button>
+        <button class="tab-btn" onclick="showTab('quotes')">User Quotes</button>
+        <button class="tab-btn" onclick="showTab('recommendations')">Recommendations</button>
+    </nav>
+
     <main>
-        <section>
-            <h2>Research Goal</h2>
-            <p>Evaluate mobile checkout experience for usability issues and opportunities.</p>
+        <!-- Overview Tab -->
+        <section id="overview" class="tab-content active">
+            <div class="overview-grid">
+                <div class="stat-card">
+                    <h3>Research Goal</h3>
+                    <p>Evaluate mobile checkout experience for usability issues and opportunities.</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Participants</h3>
+                    <div class="stat-number">12</div>
+                    <p>4 New Users • 6 Returning Users • 2 Power Users</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Key Issues Found</h3>
+                    <div class="stat-number">4</div>
+                    <p>Critical usability problems identified</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Success Rate</h3>
+                    <div class="stat-number">33%</div>
+                    <p>Users completed checkout without assistance</p>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <!-- User Journey Tab -->
+        <section id="journey" class="tab-content">
+            <div class="journey-container">
+                <h2>Mobile Checkout Journey</h2>
+                <div class="journey-steps">
+                    <div class="step success-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Cart Review</h4>
+                            <p class="success-rate">✅ 92% Success Rate</p>
+                            <p>Users easily navigate to checkout from cart</p>
+                            <div class="step-tooltip">
+                                <div class="tooltip-content">
+                                    <strong>What worked well:</strong><br>
+                                    • Clear "Checkout" button placement<br>
+                                    • Intuitive cart summary layout<br>
+                                    • Quick item quantity adjustments
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step error-step clickable-pain-point" data-pain-point="payment">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Payment Selection <span class="clickable-indicator">💡</span></h4>
+                            <p class="error-rate">❌ 67% Error Rate</p>
+                            <p>Major confusion with payment method options</p>
+                            <div class="step-tooltip">
+                                <div class="tooltip-content">
+                                    <strong>Click for detailed analysis</strong><br>
+                                    8 out of 12 users struggled with payment selection
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step error-step clickable-pain-point" data-pain-point="review">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Order Review <span class="clickable-indicator">💡</span></h4>
+                            <p class="error-rate">❌ 83% Error Rate</p>
+                            <p>Users want visual confirmation of items</p>
+                            <div class="step-tooltip">
+                                <div class="tooltip-content">
+                                    <strong>Click for detailed analysis</strong><br>
+                                    10 out of 12 users wanted visual confirmation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step error-step clickable-pain-point" data-pain-point="address">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Address Management <span class="clickable-indicator">💡</span></h4>
+                            <p class="error-rate">❌ 42% Error Rate</p>
+                            <p>Difficulty finding address edit options</p>
+                            <div class="step-tooltip">
+                                <div class="tooltip-content">
+                                    <strong>Click for detailed analysis</strong><br>
+                                    5 out of 12 users couldn't find address options
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step error-step clickable-pain-point" data-pain-point="confirmation">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Order Confirmation <span class="clickable-indicator">💡</span></h4>
+                            <p class="error-rate">❌ 58% Error Rate</p>
+                            <p>Unclear loading states and feedback</p>
+                            <div class="step-tooltip">
+                                <div class="tooltip-content">
+                                    <strong>Click for detailed analysis</strong><br>
+                                    7 out of 12 users experienced uncertainty
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Findings Tab -->
+        <section id="findings" class="tab-content">
             <h2>Key Findings</h2>
-            <ul>
-                <li>Payment Method Selection Confusion - 8 out of 12 users struggled</li>
-                <li>Order Review Lacks Visual Context - 10 out of 12 users wanted confirmation</li>
-                <li>Hidden Shipping Address Edit - 5 out of 12 users couldn't find options</li>
-                <li>Unclear Order Confirmation - 7 out of 12 users uncertain</li>
-            </ul>
+            <div class="findings-grid">
+                <div class="finding-card critical">
+                    <div class="finding-header">
+                        <h3>Payment Method Selection Confusion</h3>
+                        <span class="severity">Critical</span>
+                    </div>
+                    <div class="finding-stats">
+                        <span class="stat">8 out of 12 users struggled</span>
+                        <span class="percentage">67%</span>
+                    </div>
+                    <p>Users couldn't distinguish between saved and new payment methods</p>
+                </div>
+                <div class="finding-card high">
+                    <div class="finding-header">
+                        <h3>Order Review Lacks Visual Context</h3>
+                        <span class="severity">High</span>
+                    </div>
+                    <div class="finding-stats">
+                        <span class="stat">10 out of 12 users wanted confirmation</span>
+                        <span class="percentage">83%</span>
+                    </div>
+                    <p>Text-only order summary made users uncertain about purchases</p>
+                </div>
+                <div class="finding-card medium">
+                    <div class="finding-header">
+                        <h3>Hidden Shipping Address Edit</h3>
+                        <span class="severity">Medium</span>
+                    </div>
+                    <div class="finding-stats">
+                        <span class="stat">5 out of 12 users couldn't find options</span>
+                        <span class="percentage">42%</span>
+                    </div>
+                    <p>Address editing functionality not discoverable enough</p>
+                </div>
+                <div class="finding-card high">
+                    <div class="finding-header">
+                        <h3>Unclear Order Confirmation</h3>
+                        <span class="severity">High</span>
+                    </div>
+                    <div class="finding-stats">
+                        <span class="stat">7 out of 12 users uncertain</span>
+                        <span class="percentage">58%</span>
+                    </div>
+                    <p>Loading states and success feedback need improvement</p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>User Quotes</h2>
-            <blockquote>"I couldn't figure out if my card was already saved or if I needed to enter it again. The buttons looked the same." - P01, New User</blockquote>
-            <blockquote>"I moved last month but couldn't find where to change my address. I almost gave up and didn't buy anything." - P02, Returning User</blockquote>
-            <blockquote>"Wait, what am I actually buying? I can see the price but where are the product images?" - P03, New User</blockquote>
-            <blockquote>"I pressed 'Complete Order' but nothing happened for like 10 seconds. Did it work? Should I press it again?" - P04, Power User</blockquote>
-            <blockquote>"There were like 4 different payment buttons and I wasn't sure which one to use. Very confusing." - P05, New User</blockquote>
-            <blockquote>"I wanted to double-check what I was ordering but the summary was just text. Show me pictures!" - P06, Returning User</blockquote>
+        <!-- User Quotes Tab -->
+        <section id="quotes" class="tab-content">
+            <div class="quotes-header">
+                <h2>User Quotes</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterQuotes('all')">All Users</button>
+                    <button class="filter-btn" onclick="filterQuotes('new')">New Users</button>
+                    <button class="filter-btn" onclick="filterQuotes('returning')">Returning Users</button>
+                    <button class="filter-btn" onclick="filterQuotes('power')">Power Users</button>
+                </div>
+            </div>
+            <div class="quotes-container">
+                <div class="quote-card" data-user-type="new">
+                    <blockquote>"I couldn't figure out if my card was already saved or if I needed to enter it again. The buttons looked the same."</blockquote>
+                    <div class="quote-attribution">
+                        <span class="participant">P01</span>
+                        <span class="user-type new-user">New User</span>
+                    </div>
+                </div>
+                <div class="quote-card" data-user-type="returning">
+                    <blockquote>"I moved last month but couldn't find where to change my address. I almost gave up and didn't buy anything."</blockquote>
+                    <div class="quote-attribution">
+                        <span class="participant">P02</span>
+                        <span class="user-type returning-user">Returning User</span>
+                    </div>
+                </div>
+                <div class="quote-card" data-user-type="new">
+                    <blockquote>"Wait, what am I actually buying? I can see the price but where are the product images?"</blockquote>
+                    <div class="quote-attribution">
+                        <span class="participant">P03</span>
+                        <span class="user-type new-user">New User</span>
+                    </div>
+                </div>
+                <div class="quote-card" data-user-type="power">
+                    <blockquote>"I pressed 'Complete Order' but nothing happened for like 10 seconds. Did it work? Should I press it again?"</blockquote>
+                    <div class="quote-attribution">
+                        <span class="participant">P04</span>
+                        <span class="user-type power-user">Power User</span>
+                    </div>
+                </div>
+                <div class="quote-card" data-user-type="new">
+                    <blockquote>"There were like 4 different payment buttons and I wasn't sure which one to use. Very confusing."</blockquote>
+                    <div class="quote-attribution">
+                        <span class="participant">P05</span>
+                        <span class="user-type new-user">New User</span>
+                    </div>
+                </div>
+                <div class="quote-card" data-user-type="returning">
+                    <blockquote>"I wanted to double-check what I was ordering but the summary was just text. Show me pictures!"</blockquote>
+                    <div class="quote-attribution">
+                        <span class="participant">P06</span>
+                        <span class="user-type returning-user">Returning User</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <!-- Recommendations Tab -->
+        <section id="recommendations" class="tab-content">
             <h2>Recommendations</h2>
-            <ol>
-                <li>Redesign Payment Method Selection - Create clear visual distinction between payment options</li>
-                <li>Add Visual Order Review - Include product thumbnails and descriptions in final summary</li>
-                <li>Implement Loading States - Show clear progress indicators during order processing</li>
-                <li>Improve Address Management - Make shipping address editing more discoverable</li>
-            </ol>
+            <div class="recommendations-container">
+                <div class="recommendation-card priority-high">
+                    <div class="recommendation-header">
+                        <h3>1. Redesign Payment Method Selection</h3>
+                        <span class="priority">High Priority</span>
+                    </div>
+                    <p>Create clear visual distinction between payment options with better labeling and iconography</p>
+                    <div class="implementation">
+                        <strong>Implementation:</strong>
+                        <ul>
+                            <li>Add distinct icons for saved vs new payment methods</li>
+                            <li>Use different button styles and colors</li>
+                            <li>Include clear labels like "Use saved card" vs "Add new card"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recommendation-card priority-high">
+                    <div class="recommendation-header">
+                        <h3>2. Add Visual Order Review</h3>
+                        <span class="priority">High Priority</span>
+                    </div>
+                    <p>Include product thumbnails and descriptions in final summary to increase user confidence</p>
+                    <div class="implementation">
+                        <strong>Implementation:</strong>
+                        <ul>
+                            <li>Display product images in order summary</li>
+                            <li>Show key product details (size, color, quantity)</li>
+                            <li>Add ability to quick-edit quantities from review screen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recommendation-card priority-medium">
+                    <div class="recommendation-header">
+                        <h3>3. Implement Loading States</h3>
+                        <span class="priority">Medium Priority</span>
+                    </div>
+                    <p>Show clear progress indicators during order processing to reduce user anxiety</p>
+                    <div class="implementation">
+                        <strong>Implementation:</strong>
+                        <ul>
+                            <li>Add spinner and "Processing order..." text</li>
+                            <li>Disable submit button after first click</li>
+                            <li>Show clear success confirmation with order number</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recommendation-card priority-medium">
+                    <div class="recommendation-header">
+                        <h3>4. Improve Address Management</h3>
+                        <span class="priority">Medium Priority</span>
+                    </div>
+                    <p>Make shipping address editing more discoverable and accessible</p>
+                    <div class="implementation">
+                        <strong>Implementation:</strong>
+                        <ul>
+                            <li>Add "Edit" link next to current shipping address</li>
+                            <li>Use progressive disclosure for address forms</li>
+                            <li>Provide address validation and suggestions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <!-- Pain Point Modal -->
+    <div id="painPointModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Pain Point Analysis</h3>
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced tab switching with smooth transitions
+        function showTab(tabName) {
+            // Hide all tab contents with fade out
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                if (content.classList.contains('active')) {
+                    content.classList.add('fade-out');
+                    setTimeout(() => {
+                        content.classList.remove('active', 'fade-out');
+                    }, 200);
+                }
+            });
+
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab content with fade in
+            setTimeout(() => {
+                document.getElementById(tabName).classList.add('active', 'fade-in');
+                setTimeout(() => {
+                    document.getElementById(tabName).classList.remove('fade-in');
+                }, 500);
+            }, 200);
+
+            // Add active class to clicked tab button
+            event.target.classList.add('active');
+        }
+
+        // Enhanced quote filtering with smooth animations
+        function filterQuotes(userType) {
+            const quotes = document.querySelectorAll('.quote-card');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+
+            // Update active filter button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Animate quotes out first
+            quotes.forEach((quote, index) => {
+                quote.classList.add('filtering-out');
+                setTimeout(() => {
+                    if (userType === 'all' || quote.dataset.userType === userType) {
+                        quote.style.display = 'block';
+                        quote.classList.remove('filtering-out');
+                        quote.classList.add('filtering-in');
+                        setTimeout(() => {
+                            quote.classList.remove('filtering-in');
+                        }, 400 + (index * 50)); // Staggered animation
+                    } else {
+                        quote.style.display = 'none';
+                        quote.classList.remove('filtering-out');
+                    }
+                }, 150);
+            });
+        }
+
+        // Pain point modal functionality
+        const painPointData = {
+            payment: {
+                title: "Payment Method Selection Confusion",
+                severity: "Critical",
+                impact: "67% Error Rate (8/12 users)",
+                description: "Users struggled to distinguish between saved and new payment methods, leading to confusion and checkout abandonment.",
+                keyIssues: [
+                    "Identical visual styling between 'Use saved card' and 'Add new card' buttons",
+                    "Unclear indication of which payment methods are already saved",
+                    "Missing visual hierarchy in payment option presentation",
+                    "No clear feedback when payment method is successfully selected"
+                ],
+                userQuotes: [
+                    "I couldn't figure out if my card was already saved or if I needed to enter it again. The buttons looked the same.",
+                    "There were like 4 different payment buttons and I wasn't sure which one to use. Very confusing."
+                ],
+                solutions: [
+                    "Add distinct icons and colors for saved vs. new payment methods",
+                    "Include clear labels like 'Use saved card ending in ****' vs 'Add new payment method'",
+                    "Implement visual feedback when payment method is selected",
+                    "Create better visual hierarchy with card-based layouts"
+                ]
+            },
+            review: {
+                title: "Order Review Lacks Visual Context",
+                severity: "High",
+                impact: "83% Error Rate (10/12 users)",
+                description: "Users wanted visual confirmation of their items before completing purchase, but only text-based summaries were provided.",
+                keyIssues: [
+                    "No product images in final order review",
+                    "Text-only item descriptions lack clarity",
+                    "Missing key product details (size, color, quantity)",
+                    "No way to quickly modify order from review screen"
+                ],
+                userQuotes: [
+                    "Wait, what am I actually buying? I can see the price but where are the product images?",
+                    "I wanted to double-check what I was ordering but the summary was just text. Show me pictures!"
+                ],
+                solutions: [
+                    "Add product thumbnails to order review section",
+                    "Include key product attributes in visual format",
+                    "Enable quick quantity edits from review screen",
+                    "Show total savings and discounts visually"
+                ]
+            },
+            address: {
+                title: "Hidden Shipping Address Edit",
+                severity: "Medium",
+                impact: "42% Error Rate (5/12 users)",
+                description: "Users who needed to update their shipping address couldn't easily find the edit functionality.",
+                keyIssues: [
+                    "Address edit button not prominently displayed",
+                    "Edit functionality hidden in dropdown menus",
+                    "No clear indication that address can be changed",
+                    "Complex multi-step address editing process"
+                ],
+                userQuotes: [
+                    "I moved last month but couldn't find where to change my address. I almost gave up and didn't buy anything."
+                ],
+                solutions: [
+                    "Add prominent 'Edit' link next to shipping address",
+                    "Use inline editing for address changes",
+                    "Provide address validation and auto-suggestions",
+                    "Show multiple saved addresses if available"
+                ]
+            },
+            confirmation: {
+                title: "Unclear Order Confirmation",
+                severity: "High",
+                impact: "58% Error Rate (7/12 users)",
+                description: "Users experienced anxiety and uncertainty during order processing due to poor loading states and feedback.",
+                keyIssues: [
+                    "No loading indicators during order processing",
+                    "Submit button remains clickable after first press",
+                    "Unclear success confirmation messaging",
+                    "Long processing times without status updates"
+                ],
+                userQuotes: [
+                    "I pressed 'Complete Order' but nothing happened for like 10 seconds. Did it work? Should I press it again?"
+                ],
+                solutions: [
+                    "Add clear loading spinner with 'Processing order...' text",
+                    "Disable submit button after first click to prevent double-submission",
+                    "Show step-by-step progress indicators",
+                    "Display clear success confirmation with order number"
+                ]
+            }
+        };
+
+        function openPainPointModal(painPointType) {
+            const modal = document.getElementById('painPointModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            const data = painPointData[painPointType];
+
+            modalTitle.textContent = data.title;
+            
+            modalContent.innerHTML = `
+                <div class="pain-point-detail">
+                    <div class="severity-badge severity-${data.severity.toLowerCase()}">${data.severity} Priority</div>
+                    <div class="impact-stat">${data.impact}</div>
+                    <p class="description">${data.description}</p>
+                    
+                    <div class="detail-section">
+                        <h4>Key Issues Identified</h4>
+                        <ul class="issues-list">
+                            ${data.keyIssues.map(issue => `<li>${issue}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h4>User Feedback</h4>
+                        <div class="user-quotes">
+                            ${data.userQuotes.map(quote => `<blockquote>"${quote}"</blockquote>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="detail-section solutions">
+                        <h4>Recommended Solutions</h4>
+                        <ul class="solutions-list">
+                            ${data.solutions.map(solution => `<li>${solution}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            modal.classList.add('show');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('painPointModal');
+            modal.classList.remove('show');
+            document.body.classList.remove('modal-open');
+        }
+
+        // Add click event listeners to pain points
+        document.addEventListener('DOMContentLoaded', function() {
+            const painPoints = document.querySelectorAll('.clickable-pain-point');
+            painPoints.forEach(painPoint => {
+                painPoint.addEventListener('click', function() {
+                    const painPointType = this.dataset.painPoint;
+                    openPainPointModal(painPointType);
+                });
+            });
+
+            // Close modal when clicking outside
+            document.getElementById('painPointModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
